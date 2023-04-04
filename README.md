@@ -10,3 +10,8 @@ Abbiamo un elenco degli studenti di una facoltà. Ogni studente ha un nome, un c
 
 -   Creare un'array di oggetti ( nome, cognome, età )
 -   Creare due filter per aggiungere in un'array gli utenti minorenni e in un'altra array gli over 65.
+
+## Steps Jsnack 2
+
+-   Creare un'array di oggetti ( nome, cognome, numero matricola ed elenco voti )
+-
