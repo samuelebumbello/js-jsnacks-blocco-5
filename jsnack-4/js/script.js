@@ -35,3 +35,21 @@ const students = [
     sommaVoti: 78,
     }
 ];
+
+const container1 = document.getElementById('class');
+const container2 = document.getElementById('sum70');
+const container3 = document.getElementById('sum70toid120');
+
+students.forEach(studente =>{
+    const{id, nome, sommaVoti} = studente;
+
+    container1.innerHTML +=`
+    <h1 class="card-title">${nome.toUpperCase()}</h1>
+    <p class="card-text">Somma dei voti: ${sommaVoti}</p>
+    <p class="card-text">Id Studente: ${id}</p>
+    `
+
+});
+
+
+
