@@ -9,7 +9,7 @@ const biciCorsa = [
     },
     {
         nome: "passeggio",
-        peso: 21,
+        peso: 8,
     },
     {
         nome: "montagna",
@@ -21,11 +21,11 @@ const biciCorsa = [
     },
     {
         nome: "ruote grosse",
-        peso: 23,
+        peso: 10,
     },
     {
         nome: "ruote sottili",
-        peso: 28,
+        peso: 19,
     },
     {
         nome: "senza marcia",
@@ -33,3 +33,15 @@ const biciCorsa = [
     },
 ];
 
+const container1 = document.getElementById("bici");
+const container2 = document.getElementById("pesoMin");
+
+
+const pesoMin = biciCorsa.reduce( (obiettivo, numero) => obiettivo.peso < numero.peso ? obiettivo : numero);
+
+console.log(pesoMin);
+
+container1.innerHTML +=`
+<h1 class="card-title">Nome Bici: ${pesoMin.nome}</h1>
+<h1 class="card-text">Peso: ${pesoMin.peso}Kg</h1>
+`
