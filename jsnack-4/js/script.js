@@ -1,6 +1,6 @@
 const students = [
     {
-    id:125,
+    id:119,
     nome: "Marco rossi",
     sommaVoti: 72,
     },
@@ -10,7 +10,7 @@ const students = [
     sommaVoti: 95,
     },
     {
-    id: 721,
+    id: 100,
     nome: "Alessandro Aversa",
     sommaVoti: 85,
     },
@@ -20,7 +20,7 @@ const students = [
     sommaVoti: 99,
     },
     {
-    id: 174,
+    id: 98,
     nome: "Luigi Gambino",
     sommaVoti: 45,
     },
@@ -51,5 +51,27 @@ students.forEach(studente =>{
 
 });
 
+const votes70 = students.filter(studente => studente.sommaVoti > 70);
 
+votes70.forEach(studente =>{
+    const{id, nome, sommaVoti} = studente;
+
+    container2.innerHTML +=`
+    <h1 class="card-title">${nome.toUpperCase()}</h1>
+    <p class="card-text">Somma dei voti: ${sommaVoti}</p>
+    <p class="card-text">Id Studente: ${id}</p>
+    `
+});
+
+const id120 = votes70.filter(studente => studente.id > 120);
+
+id120.forEach(studente =>{
+    const{id, nome, sommaVoti} = studente;
+
+    container3.innerHTML +=`
+    <h1 class="card-title">${nome.toUpperCase()}</h1>
+    <p class="card-text">Somma dei voti: ${sommaVoti}</p>
+    <p class="card-text">Id Studente: ${id}</p>
+    `
+});
 
